@@ -14268,3 +14268,10 @@ Traceback (most recent call last):
     if plc.write_to_db_bytearray(db=db, offset=offset, data=data):
 AttributeError: 'NoneType' object has no attribute 'write_to_db_bytearray'
 2020-12-03 14:09:04,542 - funcs.log -  INFO - main cycle of program
+2020-12-03 14:20:21,770 - funcs.log -  ERROR - Error value in step_cycle with error [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/lib_pys7_to_plc/funcs/log.py", line 27, in wrapper
+    return func(*args, **kwargs)
+  File "/home/alex/PycharmProjects/lib_pys7_to_plc/funcs/plc_func.py", line 54, in step_cycle
+    bytes = data_to_bytearray(data)
+BrokenPipeError: [Errno 32] Broken pipe
